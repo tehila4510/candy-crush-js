@@ -1,0 +1,76 @@
+body {
+    background-image: url("../img/candyCrush/רקע.jpg");
+    background-size:cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 30%;
+}
+@media (max-width: 1200px) {
+  body{
+    background-size: auto 100%; 
+    background-position: center top; 
+    height: 100vh;
+  }
+}
+
+#enter {
+    direction: rtl;
+    text-align: center;
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#inputEnter {
+    border: 2px solid #e99881;
+    background-color: white;
+    padding: 12px;
+    font-size: 1rem;
+    cursor: text;
+    display: block;
+    width: 50%;
+    box-sizing: border-box;
+    color: black;
+    font-family: 'Segoe UI';
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    margin-inline: 25%;
+}
+
+#btnEnter {
+    border: 2px solid #52e0d3;
+    background-color: white;
+    padding: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: block;
+    width: 50%;
+    box-sizing: border-box;
+    color: black;
+    font-family: 'Segoe UI';
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+     margin-inline: 25%;
+}
+
+#btnEnter:hover {
+    background-color: #52e0d3;
+    color: white;
+}
+
+#label {
+    color: #090909;
+    font: size 1.vw;
+    text-align: center;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* מדיה למסכים קטנים במיוחד */
+@media (max-width: 1200px) {
+    #enter {
+        padding: 1rem;
+    }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ברוך הבא</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body id="enterBody">
+
+    <form id="enter2">
+        <div id="hello"></div><br>
+        <button class="yesORno" style="display: inline-block;">קל</button><br>
+        <button class="yesORno" style="display: inline-block;">קשה</button><br>
+    </form>
+      <audio id="music" src="../audio/music2.mp3" loop autoplay></audio>
+
+    <script>
+        const x = document.getElementById("hello");
+        const username = localStorage.getItem("username");
+        if (username) {
+            x.innerHTML = "שלום " + username + "!";
+        } else {
+            x.innerHTML = "שלום!";
+        }
+
+        //level
+        const buttons = document.querySelectorAll(".yesORno");
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[i].addEventListener("click", function (event) {
+                event.preventDefault(); // מונע מהטופס לעבור דף לפני הזמן
+                const name = this.innerHTML;
+                console.log(name);
+                localStorage.setItem("level", name);
+                window.location.href = "theGame.html";
+            });
+        }
+    </script>
+</body>
+
+</html>

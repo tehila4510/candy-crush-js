@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>theGame</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+  <h1>Candy Crush</h1>
+  <button id="menuIcon" onclick="toggleMenu()">
+    ☰
+  </button>
+  <div id="back"></div>
+  <div id="overlay2"></div>
+  <div id="container">
+    <div>
+      <div id="myNav" class="overlay">
+        <div class="overlay-content">
+          <button onclick="BackPage()" class="btn"><img src="../img/icons/backR.png" width="30"
+              height="30" /></button><br /><br />
+          <button onclick="Instructions()" class="btn"><img src="../img/icons/help2.png"
+              width="30" height="30" /></button><br /><br />
+          <button onclick="resetGame()" class="btn"><img src="../img/icons/h.png" /></button><br /><br />
+          <button onclick="pause() " class="btn"><img id="stopOrCon" src="../img/icons/pause.png" width="30"
+              height="30" /></button><br /><br />
+          <button onclick="Definitions()" class="btn"><img src="../img/icons/settings.png" width="30"
+              height="30" /></button><br /><br />
+        </div>
+      </div>
+    </div>
+    <div id="game">
+      <div id="ui">
+        <div id="level">Level: <span id="levelValue">1</span></div>
+        <div id="score">Score: <span id="scoreValue">0</span></div>
+        <div id="moves">Moves: <span id="moveCount">10</span></div>
+        <div id="highscore">High Score: <span id="highScoreValue">0</span></div>
+        <button id="resetBtn">Restart</button>
+      </div>
+
+      <div id="board"></div>
+      <div id="finalScore"></div>
+    </div>
+    <div>
+      <!-- Taimer -->
+      <div id="t"> </div>
+
+      <!--לוח של מה שצריך כל פעם-->
+      <div id="candies"></div>
+    </div>
+  </div>
+  <audio id="music" src="../audio/music2.mp3" loop autoplay ></audio>
+  <script src="../script/all.js"></script>
+</body>
+
+</html>

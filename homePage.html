@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homePage</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <form id="enter">
+        <label id="label" for="inputEnter"><b>איך קוראים לך?</b></label><br>
+        <input id="inputEnter" type="text" placeholder="ארי בר שלום">
+        <button type="submit" id="btnEnter">כניסה</button>
+    </form>
+
+    <script>
+        document.getElementById("enter").addEventListener("submit", function (event) {
+            event.preventDefault(); // מונע מהטופס לעבור דף לפני הזמן
+            const name = document.getElementById("inputEnter").value;
+            localStorage.setItem("username", name);
+            window.location.href = "newHtml/enter.html"; // ניתוב לדף הבא
+        });
+    </script>
+</body>
+
+</html>
